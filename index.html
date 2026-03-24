@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+		<title>Music Explorer App</title>
+		<link
+			rel="stylesheet"
+			href="style.css" />
+	</head>
+	<body>
+		<div class="app">
+			<header class="header">
+				<h1>Music Explorer</h1>
+				<p>Search songs, sort results, and filter by artist.</p>
+			</header>
+
+			<section class="controls">
+				<form
+					id="searchForm"
+					class="search-row">
+					<input
+						type="text"
+						id="searchInput"
+						placeholder="Search song or artist"
+						autocomplete="off"
+						required />
+					<button type="submit">Search</button>
+				</form>
+
+				<div class="tools-row">
+					<label>
+						Sort:
+						<select id="sortSelect">
+							<option value="none">Default</option>
+							<option value="song">Song Name (A-Z)</option>
+							<option value="artist">Artist Name (A-Z)</option>
+						</select>
+					</label>
+
+					<label>
+						Filter by artist:
+						<input
+							type="text"
+							id="filterInput"
+							placeholder="Type artist name"
+							autocomplete="off" />
+					</label>
+				</div>
+			</section>
+
+			<p
+				id="status"
+				class="status">
+				Search for a song or artist to begin.
+			</p>
+
+			<main>
+				<div
+					id="results"
+					class="results-grid"></div>
+			</main>
+		</div>
+
+		<script src="script.js"></script>
+	</body>
+</html>
