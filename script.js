@@ -4,8 +4,19 @@ var sortSelect = document.getElementById('sortSelect');
 var filterInput = document.getElementById('filterInput');
 var statusText = document.getElementById('status');
 var resultsContainer = document.getElementById('results');
+var themeToggleBtn = document.getElementById('themeToggleBtn');
 
 var allSongs = [];
+
+themeToggleBtn.addEventListener('click', function () {
+	document.body.classList.toggle('dark');
+
+	if (document.body.classList.contains('dark')) {
+		themeToggleBtn.textContent = 'Switch to Light Mode';
+	} else {
+		themeToggleBtn.textContent = 'Switch to Dark Mode';
+	}
+});
 
 searchForm.addEventListener('submit', function (event) {
 	event.preventDefault();
@@ -92,9 +103,9 @@ function renderWithSortAndFilter() {
 
 	var selectedSort = sortSelect.value;
 
-	if (selectedSort === 'song') {
+	if (selectedSort === 'artist-desc') {
 		filteredSongs.sort(function (a, b) {
-			return (a.trackName || '').localeCompare(b.trackName || '');
+			return (b.artistName || '').localeCompare(a.artistName || '');
 		});
 	}
 

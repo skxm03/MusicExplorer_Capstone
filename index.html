@@ -35,8 +35,10 @@
 						Sort:
 						<select id="sortSelect">
 							<option value="none">Default</option>
-							<option value="song">Song Name (A-Z)</option>
 							<option value="artist">Artist Name (A-Z)</option>
+							<option value="artist-desc">
+								Artist Name (Z-A)
+							</option>
 						</select>
 					</label>
 
@@ -48,6 +50,13 @@
 							placeholder="Type artist name"
 							autocomplete="off" />
 					</label>
+
+					<button
+						id="themeToggleBtn"
+						type="button"
+						class="theme-toggle">
+						Switch to Dark Mode
+					</button>
 				</div>
 			</section>
 

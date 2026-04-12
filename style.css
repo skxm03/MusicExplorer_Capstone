@@ -29,6 +29,20 @@ body {
 	color: #4b5563;
 }
 
+.theme-toggle {
+	border: none;
+	background: #111827;
+	color: #ffffff;
+	padding: 8px 14px;
+	border-radius: 8px;
+	cursor: pointer;
+	margin-left: auto;
+}
+
+.theme-toggle:hover {
+	background: #000000;
+}
+
 .controls {
 	background: #ffffff;
 	padding: 16px;
@@ -136,6 +150,42 @@ body {
 	width: 100%;
 }
 
+body.dark {
+	background: #111827;
+	color: #e5e7eb;
+}
+
+body.dark .header p,
+body.dark .status,
+body.dark .tools-row label,
+body.dark .song-card p {
+	color: #cbd5e1;
+}
+
+body.dark .controls,
+body.dark .song-card {
+	background: #1f2937;
+	border-color: #374151;
+	box-shadow: none;
+}
+
+body.dark .search-row input,
+body.dark .tools-row select,
+body.dark .tools-row input {
+	background: #0f172a;
+	color: #e5e7eb;
+	border-color: #374151;
+}
+
+body.dark .theme-toggle {
+	background: #f9fafb;
+	color: #111827;
+}
+
+body.dark .theme-toggle:hover {
+	background: #e5e7eb;
+}
+
 @media (max-width: 640px) {
 	.app {
 		margin: 20px auto;
@@ -156,5 +206,10 @@ body {
 
 	.tools-row label {
 		justify-content: space-between;
+	}
+
+	.theme-toggle {
+		margin-left: 0;
+		width: 100%;
 	}
 }
